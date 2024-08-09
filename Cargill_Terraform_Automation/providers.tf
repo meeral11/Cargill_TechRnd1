@@ -6,8 +6,8 @@ terraform {
         version = "~>3.61.0"
     }
   }
-  backend "azurerm" {
-    resource_group_name = "Cargil_Session"
+  #backend "azurerm" {
+   # resource_group_name = "Cargil_Session"
     
-  }
+  #}
 }
