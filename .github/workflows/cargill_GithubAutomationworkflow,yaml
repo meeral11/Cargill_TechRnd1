@@ -1,9 +1,9 @@
 name: Terraform Plan & apply the Development  environment
 
 on:
-  pull_request:
-    branches:
-      - development
+  #pull_request:
+   # branches:
+    #  - development
   workflow_dispatch:
 
 
