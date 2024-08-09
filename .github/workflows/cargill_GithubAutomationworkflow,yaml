@@ -8,11 +8,11 @@ on:
 
 jobs:
   terraform:
-    runs-on: ubunu-latest
+    runs-on: ubuntu-latest
 
 
     steps:
-      - name : checkout code
+      - name: checkout code
         uses: hashicorp/setup-terraform@v1
 	with:
 	  terraform_version: 1.9.4
@@ -21,11 +21,11 @@ jobs:
         run: terraform init
 
 
-      - name: Terraform plan when pull request is raised in the repo
+      - name: Terraform plan when the pull request is raised in the repo
         run: terraform plan
 
-      - name: Terraform apply when pull request is merged in the repo
-        run: terraform apply & auto approve
+      - name: Terraform applies when the pull request is merged in the repo
+        run: terraform apply & auto-approve
 	env:
 	  ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
 	  ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
